@@ -1,0 +1,16 @@
+import csv
+
+file = open("books.csv", "w")
+new_record = "Book, Author, Year of release\n"
+file.write(str(new_record))
+new_record = "Pollyanna, Eleanor H. Porter, 1913\n"
+file.write(str(new_record))
+new_record = "The Green Mile, Stephen Edwin King, 1996\n"
+file.write(str(new_record))
+new_record = "The Art of Loving, Erich From, 1956\n"
+file.write(str(new_record))
+new_record = "First Love, Ivan Sergeyevich Turgenev, 1860\n"
+file.write(str(new_record))
+new_record = "1984, George Orwell, 1949\n"
+file.write(str(new_record))
+file.close()
