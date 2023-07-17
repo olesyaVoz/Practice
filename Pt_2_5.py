@@ -21,4 +21,3 @@ while sum < 3:
     print("Счет: побед -", wins, ", поражений —", losses)
 else:
     print("Игра завершена")
-    
