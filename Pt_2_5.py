@@ -1,5 +1,4 @@
 import random
-
 game = ["0", "1"]
 temp = random.choice(game)
 sum = 0
@@ -22,5 +21,3 @@ while sum < 3:
     print("Счет: побед -", wins, ", поражений —", losses)
 else:
     print("Игра завершена")
-
-
