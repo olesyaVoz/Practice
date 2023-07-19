@@ -1,0 +1,18 @@
+from bs4 import BeautifulSoup
+import requests
+url = input("Введите ссылку на исполнителя на MUZOFOND: ")
+try:
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "lxml")
+    artist_name = soup.find("div", class_="item main")
+    all_tracks = soup.find(class_="module-layout boxShadow collectionTop").find("ul").find_all("span", class_="track")
+    n = 1
+    print(f"Топ 10 песен {artist_name.text.strip()} на MUZOFOND: ")
+    for tracks in all_tracks[:10]:
+           print(f"{n}. {tracks.text}")
+           n += 1
+except (requests.exceptions.MissingSchema,
+            requests.exceptions.InvalidURL,
+            requests.exceptions.InvalidSchema):
+        print("Введена неверная ссылка. Попробуйте еще раз.")
+
